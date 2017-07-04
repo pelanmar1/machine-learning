@@ -1,0 +1,1 @@
+function J = computeCost(X,y,theta)      g = inline('1.0 ./ (1.0 + exp(-z))');       h = g(X*theta);      Y = [y (1-y)];      J = sum(sum([log(h) log(1-h)].*Y));end

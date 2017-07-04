@@ -1,0 +1,1 @@
+function theta = logRegNewton(X,y,theta)      g = inline('1.0 ./ (1.0 + exp(-z))');       m = length(y);      h = g(X*theta);      grad = (X'*(h-y))/m;      H = (1/m).*X' * diag(h) * diag(1-h) * X;      theta = theta - H\grad;end
